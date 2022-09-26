@@ -8,4 +8,4 @@
 - Integrate the Movie Database Api to display films and series.
 - Add a carousel functionility
 
-<img src="screenshots/Picture1.png" width=170></br><img src="screenshots/Picture2.png" width=200></br><img src="screenshots/Picture3.png" width=200></br><img src="screenshots/Picture4.png" width=200></br>
+<img src="screenshots/Picture1.png" width=500></br><img src="screenshots/Picture2.png" width=200></br><img src="screenshots/Picture3.png" width=200></br><img src="screenshots/Picture4.png" width=200></br>
