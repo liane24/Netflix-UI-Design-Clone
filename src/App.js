@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Account from './pages/Account';
 import {GetStarted} from './pages/GetStarted';
-import Signin from './pages/Signin';
+import Login from './pages/Login';
 import Signup from './pages/Signup';
 
 export default function App() {
@@ -9,8 +10,9 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route exact path='/' element={<GetStarted />} />
+        <Route exact path="/account" element={<Account />} />
         <Route exact path="/signup" element={<Signup />} />
-        <Route exact path="/signin" element={<Signin />} />
+        <Route exact path="/login" element={<Login />} />
       </Routes>
     </BrowserRouter>
   )

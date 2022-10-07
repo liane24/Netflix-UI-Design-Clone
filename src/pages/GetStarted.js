@@ -9,8 +9,10 @@ import EmailInput from '../components/Input/EmailInput'
 import Header from '../components/Header/Header'
 import Sections from '../components/Sections/Sections'
 import Home from '../components/Input/Home'
+import { useNavigate } from 'react-router-dom'
 
 export const GetStarted = () => {
+  
   return (
      <>
        <Container>
