@@ -1,6 +1,6 @@
 # Netflix UI Design Clone
-- I have created a clone of the Netflix landing page and sign up pages using React and styled components.
-- The aim was to practise creating responsive UI with styled components and create reusable components.
+- I have created a clone of the Netflix landing page and sign up pages using React and Styled Components.
+- The aim was to practise creating responsive UI designs with Styled Components and create reusable components.
 
 # To do list
 - Create a login page
