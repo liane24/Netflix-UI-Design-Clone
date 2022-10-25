@@ -4,7 +4,7 @@
 
 # To do list
 - Create a login page
-- implement Firebase authentication
+- Implement Firebase authentication
 - Logout functionality
 - Integrate the Movie Database Api to display films and series.
 - Add a carousel functionility
