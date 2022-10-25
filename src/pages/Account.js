@@ -1,35 +1,37 @@
-import React from 'react'
-import { StyledNavLogo } from '../components/Header/styles'
-import SignupFooter from '../components/SignupFooter/SignupFooter'
-import logo from '../assets/logo.png';
-import screen from '../assets/3screens.PNG'
-import styled from 'styled-components';
-import SignupHeader from '../components/SignUpHeader/SignupHeader';
-import { useNavigate, Link } from 'react-router-dom';
+import React from "react";
+import SignupFooter from "../components/SignupFooter/SignupFooter";
+import screen from "../assets/3screens.PNG";
+import styled from "styled-components";
+import SignupHeader from "../components/SignUpHeader/SignupHeader";
+import { useNavigate } from "react-router-dom";
 
 function Account() {
-    const navigate = useNavigate();
-    const handleClick = () => {
-        navigate("/signup");
-    }
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/signup");
+  };
   return (
     <Container>
-        <NavWrapper>
-            <SignupHeader />
+      <NavWrapper>
+        <SignupHeader />
         <Form>
-            <div className="picture">
-                <img src={screen} alt="" />
-            </div>
-            <h6>STEP <span>1</span> OF <span>3</span></h6>
-            <h1>Finish setting up your account</h1>
-            <p>Netflix is personalised for you. Create a password to watch on any device at any time.</p>
-            <button onClick={handleClick()}>Next</button>
+          <div className="picture">
+            <img src={screen} alt="" />
+          </div>
+          <h6>
+            STEP <span>1</span> OF <span>3</span>
+          </h6>
+          <h1>Finish setting up your account</h1>
+          <p>
+            Netflix is personalised for you. Create a password to watch on any
+            device at any time.
+          </p>
+          <button onClick={handleClick()}>Next</button>
         </Form>
-        </NavWrapper>
-    <SignupFooter />
+      </NavWrapper>
+      <SignupFooter />
     </Container>
-  )
-
+  );
 }
 
 const Container = styled.div`
@@ -48,7 +50,6 @@ const Form = styled.form`
   padding: 1rem;
   .picture {
     text-align: center;
-
   }
   .signup-err {
     background-color: #ffa00a;
@@ -65,9 +66,8 @@ const Form = styled.form`
     font-size: 2rem;
     font-weight: 500;
     text-align: center;
-   
   }
-   span {
+  span {
     font-weight: 500;
     color: black;
   }
@@ -109,7 +109,7 @@ const Form = styled.form`
     border-radius: 5px;
     cursor: pointer;
   }
-  
+
   @media only screen and (max-width: 540px) {
     padding: 1.5rem 1.5rem;
     .signup-err,
@@ -156,7 +156,6 @@ const Form = styled.form`
       font-size: 2.15rem;
       padding: 1.5rem;
     }
-    
   }
 `;
 

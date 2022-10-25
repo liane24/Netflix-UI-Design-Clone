@@ -1,22 +1,21 @@
-import React from "react"
-import styled from "styled-components"
-import faqs from "../../data/faqsData"
-import Questions from "./Questions"
+import React from "react";
+import styled from "styled-components";
+import faqs from "../../data/faqsData";
+import Questions from "./Questions";
 
 export default function FaqContainer() {
-    return (
+  return (
     <Question>
-        <Tyghk>
-         <h1>Frequently Asked Questions</h1>
-                 <div>
-                     {faqs.map((faq) => {
-                         return <Questions faq={faq} key={faq.id}/>
-                     })}
-                     
-                 </div>
-         </Tyghk>   
+      <Pane>
+        <h1>Frequently Asked Questions</h1>
+        <div>
+          {faqs.map((faq) => {
+            return <Questions faq={faq} key={faq.id} />;
+          })}
+        </div>
+      </Pane>
     </Question>
-    )
+  );
 }
 
 const Question = styled.div`
@@ -24,12 +23,10 @@ const Question = styled.div`
   color: #ffffff;
   border-bottom: 10px solid #222222;
   padding-bottom: 4rem;
-
-  
 `;
 
-const Tyghk = styled.div`
- width: 55%;
+const Pane = styled.div`
+  width: 55%;
   margin: 0 auto;
   text-align: center;
   h1 {
@@ -50,4 +47,4 @@ const Tyghk = styled.div`
       font-size: 3.5rem;
     }
   }
-`
+`;

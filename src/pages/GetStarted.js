@@ -1,38 +1,34 @@
-import React from 'react'
-import { sectionDatas } from "../data/sectionDatas"
-import FaqContainer from '../components/Faqs/FaqContainer'
-import FooterContainer from '../components/Footer/FooterContainer'
-import styled from 'styled-components'
-import AllSections from '../components/Sections/AllSection'
-import background_img from "../assets/background-image.jpg"
-import EmailInput from '../components/Input/EmailInput'
-import Header from '../components/Header/Header'
-import Sections from '../components/Sections/Sections'
-import Home from '../components/Input/Home'
-import { useNavigate } from 'react-router-dom'
+import React from "react";
+import FaqContainer from "../components/Faqs/FaqContainer";
+import FooterContainer from "../components/Footer/FooterContainer";
+import styled from "styled-components";
+import background_img from "../assets/background-image.jpg";
+import Header from "../components/Header/Header";
+import Sections from "../components/Sections/Sections";
+import Home from "../components/Input/Home";
 
 export const GetStarted = () => {
-  
   return (
-     <>
-       <Container>
-       <Header />
+    <>
+      <Container>
+        <Header />
         <Home />
-         </Container>
-       <Sections />
-       <FaqContainer />
-       <FooterContainer />
-     </>
-  )
-}
+      </Container>
+      <Sections />
+      <FaqContainer />
+      <FooterContainer />
+    </>
+  );
+};
 
 const Container = styled.div`
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${background_img});
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(${background_img});
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 75vh;
   border-bottom: 10px solid #222222;
-  
+
   @media only screen and (max-width: 480px) {
     min-height: 58vh;
   }
@@ -46,9 +42,8 @@ const Container = styled.div`
   @media only screen and (min-width: 550px) and (max-width: 1024px) {
     min-height: 55vh;
   }
-
 `;
- 
+
 const TitleSection = styled.div`
   text-align: center;
   color: white;
@@ -72,7 +67,7 @@ const TitleSection = styled.div`
   @media only screen and (max-width: 540px) {
     width: 100%;
     margin: 4rem auto 4rem auto;
-    
+
     h1 {
       font-size: 1.75rem;
     }

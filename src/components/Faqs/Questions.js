@@ -1,51 +1,49 @@
-import React from 'react';
-import styled from 'styled-components';
-import { useState } from 'react';
+import React from "react";
+import styled from "styled-components";
+import { useState } from "react";
 
- export default function Questions(props) {
-    const [show, setShow] = useState(false);
+export default function Questions(props) {
+  const [show, setShow] = useState(false);
 
-    function handleClick() {
-        setShow(!show);
-    }
+  function handleClick() {
+    setShow(!show);
+  }
 
-    return (
-       <Container>
-            <Header>
-                <p>{props.faq.header}</p>
-                <Add onClick={handleClick}>{show ? <span>&#215;</span> : "+"}</Add>
-            </Header>
-            {show && <Details>
-            <p>{props.faq.body}</p>
-        </Details>}
-        </Container>
-    )
+  return (
+    <Container>
+      <Header>
+        <p>{props.faq.header}</p>
+        <Add onClick={handleClick}>{show ? <span>&#215;</span> : "+"}</Add>
+      </Header>
+      {show && (
+        <Details>
+          <p>{props.faq.body}</p>
+        </Details>
+      )}
+    </Container>
+  );
 }
 
 const Container = styled.div`
-    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 `;
-    
+
 const Header = styled.div`
-    background-color: #303030;
-    font-size: 25px;
-    
-    padding: 0 10px;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  background-color: #303030;
+  font-size: 25px;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  p {
     color: white;
-   
-    p {
-        color: white;
-        
-        font-weight: 100;
-    }
-    @media only screen and (max-width: 540px) {
+    font-weight: 100;
+  }
+  @media only screen and (max-width: 540px) {
     p {
       font-size: 20px;
-      
     }
   }
 
@@ -57,41 +55,33 @@ const Header = styled.div`
 `;
 
 const Add = styled.div`
-    
-    font-size: 45px;
-    cursor: pointer;
-    color: white;
+  font-size: 45px;
+  cursor: pointer;
+  color: white;
 `;
 
 const Details = styled.div`
-    background-color: #303030;
-    font-size: 25px;
-    padding: 35px;
-    align-items: center;
-   
-   
-    margin-bottom: 10px;
-    margin-top: 2px;
-    line-height: 1.7;
-    transition: all 2s;
+  background-color: #303030;
+  font-size: 25px;
+  padding: 35px;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: 2px;
+  line-height: 1.7;
+  transition: all 2s;
+  p {
+    color: white;
+    font-weight: 100;
+  }
+  @media only screen and (max-width: 540px) {
     p {
-        color: white;
-        font-weight: 100;
+      font-size: 12px;
     }
-    @media only screen and (max-width: 540px) {
-    
-      p {
-        font-size: 12px;
-      }
-    
   }
 
   @media only screen and (min-width: 500px) and (max-width: 1024px) {
- 
-      p {
-        font-size: 2rem;
-      }
+    p {
+      font-size: 2rem;
     }
-  
+  }
 `;
-    
